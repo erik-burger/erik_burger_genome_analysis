@@ -1,2 +1,2 @@
 # erik_burger_genome_analysis
-The aim of this project is to assemble the genome of fro the fuit Durian (​Durio zibethinus)​ and then to annotate the genome using data from a database. The transcriptome form different parts of the fruit wll be assembled to study the expression.
+The aim of this project is to assemble the genome of from the fruit Durian (Durio zibethinus) and then to annotate the genome. The transcriptome form different parts of the fruit will be assembled to study the differences in expression. If time is available the gene expression in the durian fruit will also be compared to the expression in other fruits. 
