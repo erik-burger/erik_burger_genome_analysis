@@ -24,4 +24,4 @@ End date | Acitvity
 ## Project Organization
 
 In the root on github there are three folders related to this analysis, data, code, analysis. In the data folder the raw data and metadata will be stored in separate folders. In the code folder the code will be stored in folders with names that tells to what analysis the codes are related to. In the analysis folder the output files from each program/analysis are stored in folders with names that are related to that program or analysis.
-:shipit:
+
