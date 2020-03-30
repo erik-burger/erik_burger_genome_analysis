@@ -8,7 +8,7 @@ This diagram has been created to display with an overview of the methods that wi
 
 ![Workflow diagram](/images/Project_plan.png)  
 
-Some of the analyses will take longer time than others. For example the first assembly of the PacBio reads will take approximately 17 hours and if I decide to try to run the assembly with different parameters it would take a lot longer. Sine That is quite an essential analysis to progress in the project it can be seen as a bottleneck since it will be so time dependent.  
+Before the alignment of the short reads and the assembly of the RNA-seq the program fastQC will be run on those sequences to asses their quality. Some of the analyses will take longer time than others. For example the first assembly of the PacBio reads will take approximately 17 hours and if I decide to try to run the assembly with different parameters it would take a lot longer. Sine that is quite an essential analysis to progress in the project it can be seen as a bottleneck since it will be so time dependent. 
 
 ## Time schedule 2020:
 
