@@ -1,4 +1,7 @@
 # erik_burger_genome_analysis
+
+This project is based on the paper _The draft genome of tropical fruit durian (Durio zibethinus)_ (aka group 5).  
+
 The aim of this project is to assemble the genome of from the fruit Durian (Durio zibethinus) and then to annotate the genome. The transcriptome form different parts of the fruit will be assembled to study the differences in expression. If time is available the gene expression in the durian fruit will also be compared to the expression in other fruits.
 
 This diagram has been created to display with an overview of the methods that will be used and how everything is connected in this project:  
