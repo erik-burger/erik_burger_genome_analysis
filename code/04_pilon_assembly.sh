@@ -8,6 +8,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
+module load bioinfo-tools
+module load Pilon/1.22
 
 java -Xmx16G -jar $PILON_HOME/pilon.jar \
 pilon --genome /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta \
