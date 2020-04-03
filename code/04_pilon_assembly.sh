@@ -12,7 +12,7 @@ module load bioinfo-tools
 module load Pilon/1.22
 
 java -Xmx16G -jar $PILON_HOME/pilon.jar \
-pilon --genome /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta \
+--genome /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta \
 --frags /home/erbu6020/erik_burger_genome_analysis/analyses/03_bwa_illumina_alignment_with_pacbio/bwa_alignment_illumina.bam \
 --output pilon_assembly \
 --outdir /home/erbu6020/erik_burger_genome_analysis/analyses/04_pilon_assembly/
