@@ -13,7 +13,7 @@ module load bioinfo-tools
 module load bwa/0.7.17
 
 #bwa alignment that is piped to samtools to give a BAM output file instead of a SAM.
-bwa index -t 2 /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta
+bwa index /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta
 
 bwa mem -t 2  /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta \
 /home/erbu6020/erik_burger_genome_analysis/data/raw_data/illumina/SRR6058604_scaffold_06.1P.fastq.gz \
