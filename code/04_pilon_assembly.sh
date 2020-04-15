@@ -10,7 +10,9 @@
 
 module load bioinfo-tools
 module load Pilon/1.22
+module load samtools/1.10
 
+samtools index /home/erbu6020/erik_burger_genome_analysis/analyses/03_bwa_illumina_alignment_with_pacbio/bwa_alignment_illumina.bam
 
 java -Xmx16G -jar $PILON_HOME/pilon.jar \
 --genome /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta \
