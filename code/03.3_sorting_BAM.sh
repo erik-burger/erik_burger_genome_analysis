@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 1
 #SBATCH -t 00:10:00
-#SBATCH -J SAM_to_BAM
+#SBATCH -J sort_BAM
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
