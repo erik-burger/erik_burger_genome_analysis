@@ -2,7 +2,7 @@
 
 #SBATCH -A g2020008
 #SBATCH -p core
-#SBATCH -n 1
+#SBATCH -n 2
 #SBATCH -t 00:45:00
 #SBATCH -J pilon_assembly
 #SBATCH --mail-type=ALL
