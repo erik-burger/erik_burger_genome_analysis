@@ -12,7 +12,8 @@ module load bioinfo-tools
 module load trimmomatic/0.36
 
 java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -threads 2 \
-/home/erbu6020/erik_burger_genome_analysis/data/raw_data/transcriptome/untimmed/SRR6040095_scaffold_06.1.fastq.gz /home/erbu6020/erik_burger_genome_analysis/data/raw_data/transcriptome/untimmed/SRR6040095_scaffold_06.2.fastq.gz\
+/home/erbu6020/erik_burger_genome_analysis/data/raw_data/transcriptome/untimmed/SRR6040095_scaffold_06.1.fastq.gz \
+/home/erbu6020/erik_burger_genome_analysis/data/raw_data/transcriptome/untimmed/SRR6040095_scaffold_06.2.fastq.gz \
 /home/erbu6020/erik_burger_genome_analysis/analyses/06_trimmomatic_untrimmed_transcript/SRR6040095_scaffold_06_forward_paired.fq.gz \
 /home/erbu6020/erik_burger_genome_analysis/analyses/06_trimmomatic_untrimmed_transcript/SRR6040095_scaffold_06_forward_unpaired.fq.gz  \
 /home/erbu6020/erik_burger_genome_analysis/analyses/06_trimmomatic_untrimmed_transcript/SRR6040095_scaffold_06_reverse_paired.fq.gz \
