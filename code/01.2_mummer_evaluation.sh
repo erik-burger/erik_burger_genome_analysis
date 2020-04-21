@@ -9,7 +9,7 @@
 #SBATCH --mail-user erik.burger@hotmail.se
 
 module load bioinfo-tools
-module load MUMmer/4.0.0beta2
+module load MUMmer/3.22
 module load gnuplot/5.2.7
 
 mummer -mum -b -c /home/erbu6020/erik_burger_genome_analysis/data/paper_data/Contig_06_paper_assembly.fasta \
