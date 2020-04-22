@@ -3,7 +3,7 @@
 #SBATCH -A g2020008
 #SBATCH -p core
 #SBATCH -n 1
-#SBATCH -t 00:15:00
+#SBATCH -t 01:00:00
 #SBATCH -J canu_mummer
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
@@ -19,7 +19,7 @@ nucmer -maxmatch -p mummer_canu_assesment_unfiltered \
 
 delta-filter mummer_canu_assesment_unfiltered.delta mummer_canu_assesment.delta
 
-mummerplot --png -p mummer_canu_assesment.delta
+mummerplot --png -p mummer_canu_assesment mummer_canu_assesment.delta
 
 #mummerplot -postscript -prefix=mummer_canu_assesment /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/mummer_canu_assesment.mums
 
