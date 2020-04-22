@@ -17,7 +17,7 @@ nucmer -maxmatch -p mummer_canu_assesment_unfiltered \
 /home/erbu6020/erik_burger_genome_analysis/data/paper_data/Contig_06_paper_assembly.fasta \
 /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/canu_durian_alignment.contigs.fasta 
 
-delta-filter mummer_canu_assesment_unfiltered.delta mummer_canu_assesment.delta
+delta-filter -1 mummer_canu_assesment_unfiltered.delta mummer_canu_assesment.delta
 
 mummerplot --png -p mummer_canu_assesment mummer_canu_assesment.delta
 
