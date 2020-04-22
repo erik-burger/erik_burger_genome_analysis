@@ -9,7 +9,7 @@
 #SBATCH --mail-user erik.burger@hotmail.se
 
 module load bioinfo-tools
-module load MUMmer/3.22
+module load MUMmer/3.9.4alpha
 module load gnuplot/5.2.7
 
 
