@@ -19,7 +19,7 @@ nucmer --maxmatch -l 100 -c 100 -p mummer_canu_assesment_unfiltered \
 
 delta-filter -i 80 -l 1000 mummer_canu_assesment_unfiltered.delta > mummer_canu_assesment.delta
 
-mummerplot --png -p mummer_canu_assesment mummer_canu_assesment.delta
+mummerplot --png -p mummer_canu_assesment mummer_canu_assesment.delta --layout
 
 #mummerplot -postscript -prefix=mummer_canu_assesment /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly/mummer_canu_assesment.mums
 
