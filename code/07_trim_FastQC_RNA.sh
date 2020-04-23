@@ -13,7 +13,7 @@ module load FastQC/0.11.8
 
 # SRR6040095 (sequence that was trimmed by me)
 fastqc \
- /home/erbu6020/erik_burger_genome_analysis/analyses/06_trimmomatic_untrimmed_transcript/*.fastq.gz \
+ /home/erbu6020/erik_burger_genome_analysis/analyses/06_trimmomatic_untrimmed_transcript/*.fq.gz \
  -o /home/erbu6020/erik_burger_genome_analysis/analyses/07_trim_FastQC_RNA/SRR6040095 \
  -t 2
 
