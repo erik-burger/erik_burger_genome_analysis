@@ -15,7 +15,6 @@ module load star/2.7.2b
 star --runThreadN 2 --runMode genomeGenerate \
 --genomeDir /home/erbu6020/erik_burger_genome_analysis/analyses/08_STAR_alignment/indexed_genome \
 --genomeFastaFiles /home/erbu6020/erik_burger_genome_analysis/analyses/04_pilon_assembly/pilon_assembly.fasta \
---sjdbOverhang 99
 
 cd /home/erbu6020/erik_burger_genome_analysis/analyses/08_STAR_alignment/SRR6040092/
 # SRR6040092
