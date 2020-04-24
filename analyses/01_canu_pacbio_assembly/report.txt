@@ -1,0 +1,51 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     canu_durian_alignment.contigs
+# contigs (>= 0 bp)          989                          
+# contigs (>= 1000 bp)       989                          
+# contigs (>= 5000 bp)       903                          
+# contigs (>= 10000 bp)      593                          
+# contigs (>= 25000 bp)      138                          
+# contigs (>= 50000 bp)      65                           
+Total length (>= 0 bp)       37590953                     
+Total length (>= 1000 bp)    37590953                     
+Total length (>= 5000 bp)    37322588                     
+Total length (>= 10000 bp)   34997684                     
+Total length (>= 25000 bp)   28026197                     
+Total length (>= 50000 bp)   25760150                     
+# contigs                    989                          
+Largest contig               1979338                      
+Total length                 37590953                     
+Reference length             26551601                     
+GC (%)                       30.97                        
+Reference GC (%)             30.98                        
+N50                          380820                       
+NG50                         535759                       
+N75                          24104                        
+NG75                         354533                       
+L50                          27                           
+LG50                         15                           
+L75                          145                          
+LG75                         30                           
+# misassemblies              243                          
+# misassembled contigs       136                          
+Misassembled contigs length  23032993                     
+# local misassemblies        266                          
+# unaligned mis. contigs     19                           
+# unaligned contigs          536 + 260 part               
+Unaligned length             7138877                      
+Genome fraction (%)          97.251                       
+Duplication ratio            1.179                        
+# N's per 100 kbp            0.00                         
+# mismatches per 100 kbp     349.80                       
+# indels per 100 kbp         187.30                       
+Largest alignment            1260945                      
+Total aligned length         30437644                     
+NA50                         158876                       
+NGA50                        281393                       
+NA75                         12935                        
+NGA75                        129274                       
+LA50                         50                           
+LGA50                        25                           
+LA75                         294                          
+LGA75                        58                           
