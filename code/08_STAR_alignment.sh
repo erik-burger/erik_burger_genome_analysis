@@ -12,7 +12,7 @@ module load bioinfo-tools
 module load star/2.7.2b
 
 # Create index files
-star --runThreadN 4 --runMode genomeGenerate \
+star --runThreadN 4 --runMode genomeGenerate --genomeSAindexNbases 13 \
 --genomeDir /home/erbu6020/erik_burger_genome_analysis/analyses/08_STAR_alignment/indexed_genome \
 --genomeFastaFiles /home/erbu6020/erik_burger_genome_analysis/analyses/04_pilon_assembly/pilon_assembly.fasta \
 
