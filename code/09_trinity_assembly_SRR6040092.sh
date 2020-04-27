@@ -19,4 +19,4 @@ samtools sort /home/erbu6020/erik_burger_genome_analysis/analyses/09_trinity_ass
 /home/erbu6020/erik_burger_genome_analysis/analyses/09_trinity_assembly_SRR6040092/Aligned_sorted_SRR6040092.bam
 
 Trinity --genome_guided_bam /home/erbu6020/erik_burger_genome_analysis/analyses/09_trinity_assembly_SRR6040092/Aligned_sorted_SRR6040092.bam \
---genome_guided_max_intron 10000 --CPU 4 
+--genome_guided_max_intron 10000 --max_memory 10G --CPU 4 
