@@ -3,5 +3,4 @@ This is not a bash script like the previous code files but at wokflow of which c
 Part 1  
 ```
 cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
-´´´
-
+```
