@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 4
 #SBATCH -t 12:00:00
-#SBATCH -J Maker"_step_1
+#SBATCH -J Maker_step_1
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
