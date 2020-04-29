@@ -3,7 +3,7 @@ This is not a bash script like the previous code files but at wokflow of which c
 load modules:  
 ```
 $ module load bioinfo-tools
-$ module load maker/2.31.10
+$ module load maker/3.01.1-beta
 ```
 
 
@@ -25,8 +25,9 @@ protein=  /home/erbu6020/erik_burger_genome_analysis/data/Proteome_data/combined
 est2genome=1
 protein2genome=1
 ```
-Then maker ran with the given parameters: 
-```
-$ maker
-```
+Then maker ran with the given parameters using the bash script 10_Maker2_step_1.sh
 
+
+
+
+salloc -A g2020008 -p core -n 2 -t 00:10:00 --reservation=g2020008_29
