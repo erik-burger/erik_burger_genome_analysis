@@ -7,7 +7,7 @@ $ module load maker/3.01.1-beta
 ```
 
 
-Part 1  
+# Part 1  
 
 ```
 cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
@@ -24,6 +24,8 @@ protein=  /home/erbu6020/erik_burger_genome_analysis/data/Proteome_data/combined
 
 est2genome=1
 protein2genome=1
+
+cpus=4
 ```
 Then maker ran with the given parameters using the bash script 10_Maker2_step_1.sh
 
