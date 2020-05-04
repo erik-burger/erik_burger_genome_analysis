@@ -8,7 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
-cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output
 
 module load bioinfo-tools
 module load maker/3.01.1-beta
