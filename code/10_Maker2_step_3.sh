@@ -4,11 +4,13 @@
 #SBATCH -p core
 #SBATCH -n 4
 #SBATCH -t 18:00:00
-#SBATCH -J Maker_step_2_SNAP_training
+#SBATCH -J Maker_step_3
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
-module load bioinfo-tools
-module load snap/2013-11-29
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
 
-hmm-assembler.pl my_genome . > my_genome.hmm
+module load bioinfo-tools
+module load maker/3.01.1-beta
+
+maker
