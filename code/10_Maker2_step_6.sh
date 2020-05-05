@@ -8,4 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
+module load bioinfo-tools
+module load augustus/3.3.3
+
 optimize_augustus.pl --species=durian augustus.gbk.train --cpus=4

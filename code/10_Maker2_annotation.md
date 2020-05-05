@@ -234,7 +234,7 @@ augustus --species=durian augustus.gbk.test | tee first_training.out
 
 Optimize the training:
 ```
-optimize_augustus.pl --species=durian augustus.gbk.train
+
 ```
 
 
