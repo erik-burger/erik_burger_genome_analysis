@@ -2,7 +2,7 @@
 
 #SBATCH -A g2020008
 #SBATCH -p core
-#SBATCH -n 4
+#SBATCH -n 2
 #SBATCH -t 6:00:00
 #SBATCH -J Maker_step_6.1
 #SBATCH --mail-type=ALL
