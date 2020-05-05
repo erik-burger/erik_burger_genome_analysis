@@ -6,6 +6,7 @@ load modules:
 $ module load bioinfo-tools
 $ module load maker/3.01.1-beta
 $ module load snap/2013-11-29 
+$ module load augustus/3.3.3
 ```
 
 
@@ -192,14 +193,42 @@ cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND3
 
 ## STEP 6 
 
-Copy the code from https://github.com/hyphaltip/genome-scripts/blob/master/gene_prediction/zff2augustus_gbk.pl to be able to convert zff to gbk
+Copy the code from https://github.com/hyphaltip/genome-scripts/blob/master/gene_prediction/zff2augustus_gbk.pl to be able to convert zff to gbk into the SNAP_round_2 folder
+
+```
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_2
+
+perl zff2augustus_gbk.pl > augustus.gbk
+
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output
+
+mkdir augustus
+
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_2
+
+mv augustus.gbk /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/augustus.gbk
+```
+
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/
+
+perl /sw/bioinfo/augustus/3.3.3/rackham/scripts/randomSplit.pl /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/augustus.gbk 100
+
+
+source $AUGUSTUS_CONFIG_COPY
+
+perl /sw/bioinfo/augustus/3.3.3/rackham/scripts/new_species.pl --species=durian
+
+running batch scripts since these commands may take a long time:
+
+
 
 
 
 junk:
 salloc -A g2020008 -p core -n 2 -t 00:30:00
-
+salloc -A g2020008 -p core -n 2 -t 02:00:00 --reservation=g2020008_05
 
 cp -r pilon_assembly.maker.output_ROUND2 pilon_assembly.maker.output
 
 /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_1/my_genome.hmm
+

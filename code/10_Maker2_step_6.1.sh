@@ -1,0 +1,17 @@
+#!/bin/bash -l
+
+#SBATCH -A g2020008
+#SBATCH -p core
+#SBATCH -n 4
+#SBATCH -t 6:00:00
+#SBATCH -J Maker_step_6.1
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user erik.burger@hotmail.se
+
+
+module load bioinfo-tools
+module load maker/3.01.1-beta
+module load augustus/3.3.3
+
+etraining --species=my_species augustus.gbk.train
+augustus --species=my_species augustus.gbk.test | tee first_training.out
