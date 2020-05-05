@@ -219,6 +219,7 @@ source $AUGUSTUS_CONFIG_COPY
 perl /sw/bioinfo/augustus/3.3.3/rackham/scripts/new_species.pl --species=durian
 
 running batch scripts since these commands may take a long time:
+sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_6.1.sh 
 
 
 

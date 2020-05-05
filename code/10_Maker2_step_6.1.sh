@@ -13,5 +13,5 @@ module load bioinfo-tools
 module load maker/3.01.1-beta
 module load augustus/3.3.3
 
-etraining --species=my_species augustus.gbk.train
-augustus --species=my_species augustus.gbk.test | tee first_training.out
+etraining --species=durian augustus.gbk.train
+augustus --species=durian augustus.gbk.test | tee first_training.out
