@@ -96,7 +96,7 @@ hmm-assembler.pl my_genome . > my_genome.hmm
 
 Changed the maker_opts.ctl file:
 ```
-snaphmm = /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/my_genome.hmm
+snaphmm = /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_1/my_genome.hmm
 
 est= 
 protein=
@@ -112,32 +112,83 @@ Run maker using the batch script 10_Maker2_step_3.sh
 sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_3.sh
 ```
 
+Create a copy
+```
+cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND2
+```
+
 ## STEP 4
-
-
-
 
 Repeat step 2
 
 
+Extect maker result
 ```
 gff3_merge -d pilon_assembly_master_datastore_index.log
 ```
 
-
+Generate necessary files for training SNAP
 ```
 mkdir SNAP_round_2
 cd SNAP_round_2
-maker2zff ../pilon_assembly.all.gff
+maker2zff -n ../pilon_assembly.all.gff
 ```
 
+Validate the models to see if some are bad
 ```
 fathom genome.ann genome.dna -validate > snap_validate_output.txt
+```
+Output: ```2648 genes, 2647 OK, 1049 warnings, 1 errors```
+
+Find faulty model
+```
+cat snap_validate_output.txt | grep "error" 
+```
+
+Remove faulty model
+```
+grep -vwE "MODEL6064" genome.ann > genome.ann2
+```
+
+VAlidate again
+```
+fathom genome.ann2 genome.dna -validate 
+```
+Output: ```2647 genes, 2647 OK, 1048 warnings, 0 errors```
 
 
+Create remainig fines that are needed for SNAP: 
+```
+fathom genome.ann genome.dna -categorize 1000
+fathom uni.ann uni.dna -export 1000 -plus 
+forge export.ann export.dna
+```
 
+Train SNAP with hmm-assembler.  
+```
+hmm-assembler.pl my_genome . > my_genome.hmm
+```
 
+## STEP 5
 
+Repeat step 3
+
+Changed the maker_opts.ctl file:
+```
+snaphmm = /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_2/my_genome.hmm
+```
+ 
+
+Run maker using the batch script 10_Maker2_step_5.sh
+
+```
+sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_3.sh
+```
+
+Create a copy
+```
+cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND2
+```
 
 
 
@@ -145,6 +196,6 @@ junk:
 salloc -A g2020008 -p core -n 2 -t 00:30:00
 
 
-cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND2
+cp -r pilon_assembly.maker.output_ROUND2 pilon_assembly.maker.output
 
 /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_1/my_genome.hmm
