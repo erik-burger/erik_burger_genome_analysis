@@ -179,7 +179,7 @@ snaphmm = /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotati
 ```
  
 
-Run maker using the batch script 10_Maker2_step_5.sh
+Run maker using the batch script 10_Maker2_step_3.sh (since it is the same)
 
 ```
 sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_3.sh
@@ -187,8 +187,12 @@ sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_3.sh
 
 Create a copy
 ```
-cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND2
+cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND3
 ```
+
+## STEP 6 
+
+Copy the code from https://github.com/hyphaltip/genome-scripts/blob/master/gene_prediction/zff2augustus_gbk.pl to be able to convert zff to gbk
 
 
 
