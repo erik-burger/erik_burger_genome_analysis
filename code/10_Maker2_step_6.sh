@@ -11,6 +11,6 @@
 module load bioinfo-tools
 module load augustus/3.3.3
 
-optimize_augustus.pl --species=durian --cpus=4 \ 
---AUGUSTUS_CONFIG_PATH /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/augustus_config \ 
-augustus.gbk.train  
+optimize_augustus.pl --species=durian --cpus=4\ 
+--AUGUSTUS_CONFIG_PATH=/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/augustus_config \ 
+augustus.gbk.train
