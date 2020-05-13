@@ -9,6 +9,6 @@
 #SBATCH --mail-user erik.burger@hotmail.se
 
 module load bioinfo-tools
-modlue load GeneMark/4.57-es
+module load GeneMark/4.57-es
 
 gmes_petap.pl -ES -cores 2 -sequence /home/erbu6020/erik_burger_genome_analysis/analyses/04_pilon_assembly/pilon_assembly.fasta
