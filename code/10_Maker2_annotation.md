@@ -200,7 +200,7 @@ Creating needed gbk file
 cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_2
 
 perl zff2augustus_gbk.pl > augustus.gbk
-````
+```
 
 Bookkeeping:
 ```
@@ -242,16 +242,32 @@ etraining --AUGUSTUS_CONFIG_PATH=/home/erbu6020/erik_burger_genome_analysis/anal
 augustus --AUGUSTUS_CONFIG_PATH=/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/augustus_config --species=durian augustus.gbk.test | tee second_training.out
 ```
 
+## Step 7
 
+Changed the maker_opts.ctl file:
+```
+augustus_species=durian
+keep_preds=1
+```
+Run maker
+```
+dc /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
+sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_7.sh
+```
 
+Create a copy
+```
+cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND4
+```
 
+## Step 8
 
 
 junk:
 salloc -A g2020008 -p core -n 2 -t 00:30:00
 salloc -A g2020008 -p core -n 2 -t 02:00:00 --reservation=g2020008_05
 
-cp -r pilon_assembly.maker.output pilon_assembly.maker.output_after_augustus
+cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND4
 
 
 /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_1/my_genome.hmm
