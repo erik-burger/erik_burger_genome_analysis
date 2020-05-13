@@ -232,17 +232,27 @@ etraining --species=durian augustus.gbk.train
 augustus --species=durian augustus.gbk.test | tee first_training.out
 ```
 
-Optimize the training:
+Optimize the training by running the bash script 10_Maker2_step6.sh
+```
+sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_6.sh
 ```
 
 ```
+etraining --AUGUSTUS_CONFIG_PATH=/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/augustus_config --species=durian augustus.gbk.train
+augustus --AUGUSTUS_CONFIG_PATH=/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/augustus/augustus_config --species=durian augustus.gbk.test | tee second_training.out
+```
+
+
+
+
 
 
 junk:
 salloc -A g2020008 -p core -n 2 -t 00:30:00
 salloc -A g2020008 -p core -n 2 -t 02:00:00 --reservation=g2020008_05
 
-cp -r pilon_assembly.maker.output_ROUND2 pilon_assembly.maker.output
+cp -r pilon_assembly.maker.output pilon_assembly.maker.output_after_augustus
+
 
 /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_1/my_genome.hmm
 
