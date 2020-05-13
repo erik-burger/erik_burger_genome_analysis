@@ -272,10 +272,10 @@ sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_8.sh
 
 Changed the maker_opts.ctl file:
 ```
-gmhmm=/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/geneMark/
+gmhmm=/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/geneMark/gmhmm.mod
 ```
 
-run maker for the last time 
+run maker for the last time. (Can do this with the same code as in step 7)
 ```
 sbatch /home/erbu6020/erik_burger_genome_analysis/code/
 ```
