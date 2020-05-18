@@ -69,3 +69,9 @@ cols <- c(rgb(ramp, 0, 0),
           rgb(ramp, 0, ramp))
 print( plotPCA( rld, intgroup = c( "Sample_ID")) )
 
+dems <- res[complete.cases(res$baseMean), ]
+dems <- dems[complete.cases(dems$pvalue), ]
+dems <- dems[dems$pvalue < 0.5,]
+
+
+
