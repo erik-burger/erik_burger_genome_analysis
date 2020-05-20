@@ -251,7 +251,7 @@ keep_preds=1
 ```
 Run maker
 ```
-dc /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
 sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_7.sh
 ```
 
@@ -277,10 +277,17 @@ gmhmm=/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/p
 
 run maker for the last time. (Can do this with the same code as in step 7)
 ```
-sbatch /home/erbu6020/erik_burger_genome_analysis/code/
+sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_7.sh
 ```
 
+## Continuation 
+Ran the fasta_merge script in maker to create a fasta so that the genes discovered can be identified later on.
 
+```
+dc home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/
+
+gff3_merge -d pilon_assembly_master_datastore_index.log
+```
 
 
 
