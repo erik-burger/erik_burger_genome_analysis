@@ -69,9 +69,12 @@ cols <- c(rgb(ramp, 0, 0),
           rgb(ramp, 0, ramp))
 print( plotPCA( rld, intgroup = c( "Sample_ID")) )
 
+# Only results with a pvalue under 0.5
 dems <- res[complete.cases(res$baseMean), ]
 dems <- dems[complete.cases(dems$pvalue), ]
-dems <- dems[dems$pvalue < 0.5,]
+dems <- dems[dems$pvalue < 0.05,]
 
-
+setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/analyses/12_DESeq')
+write.table(dems, file='aril_vs_leaf.tsv',sep='\t',quote=FALSE)
+setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/code')
 

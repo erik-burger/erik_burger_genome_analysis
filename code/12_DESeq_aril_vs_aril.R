@@ -75,3 +75,12 @@ cols <- c(rgb(ramp, 0, 0),
           rgb(0, 0, ramp),
           rgb(ramp, 0, ramp))
 print( plotPCA( rld, intgroup = c( "Sample_ID")) )
+
+
+dems <- res[complete.cases(res$baseMean), ]
+dems <- dems[complete.cases(dems$pvalue), ]
+dems <- dems[dems$pvalue < 0.05,]
+
+setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/analyses/12_DESeq')
+write.table(dems, file='aril_vs_aril.tsv',sep='\t',quote=FALSE)
+setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/code')
