@@ -11,6 +11,7 @@
 module load bioinfo-tools
 module load quast
 
+# Quast analyse the pilon asembly by comparing it to the assembly in the paper
 quast.py -R /home/erbu6020/erik_burger_genome_analysis/data/paper_data/Contig_06_paper_assembly.fasta \
 -o /home/erbu6020/erik_burger_genome_analysis/analyses/04_pilon_assembly \
 /home/erbu6020/erik_burger_genome_analysis/analyses/04_pilon_assembly/pilon_assembly.fasta

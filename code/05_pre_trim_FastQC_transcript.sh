@@ -11,6 +11,7 @@
 module load bioinfo-tools
 module load FastQC/0.11.8
 
+# QC on the untrimmed RNA reads 
 fastqc \
  /home/erbu6020/erik_burger_genome_analysis/data/raw_data/transcriptome/untimmed/*.fastq.gz \
  -o /home/erbu6020/erik_burger_genome_analysis/analyses/05_pre_trim_FastQC_transcript \

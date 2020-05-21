@@ -8,6 +8,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
+# Step 7 (see 10_MAKER2_annotation.md for more info)
+# need to export the augustus config path to be able to use the species durian created by me
 
 module load bioinfo-tools
 module load augustus/3.3.3

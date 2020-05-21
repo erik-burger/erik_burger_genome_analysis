@@ -11,5 +11,6 @@
 module load bioinfo-tools
 module load samtools/1.10
 
+# Sorting the bam file
 samtools sort /home/erbu6020/erik_burger_genome_analysis/analyses/03_bwa_illumina_alignment_with_pacbio/bwa_alignment_illumina.bam \
 > /home/erbu6020/erik_burger_genome_analysis/analyses/03_bwa_illumina_alignment_with_pacbio/bwa_alignment_illumina_sorted.bam

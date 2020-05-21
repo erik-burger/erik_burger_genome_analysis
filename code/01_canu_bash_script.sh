@@ -11,6 +11,7 @@
 module load bioinfo-tools
 module load canu/1.8
 
+# Run canu assembly with the standard parameters 
 canu \
  -p canu_durian_alignment \
  -d /home/erbu6020/erik_burger_genome_analysis/analyses/01_canu_pacbio_assembly \

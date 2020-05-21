@@ -8,6 +8,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erik.burger@hotmail.se
 
+
+# Step 1 (see 10_MAKER2_annotation.md for more info)
 cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation
 
 module load bioinfo-tools

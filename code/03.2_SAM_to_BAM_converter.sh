@@ -11,5 +11,6 @@
 module load bioinfo-tools
 module load samtools/1.10
 
+# Convert sam file to bam file
 samtools view -Sb /home/erbu6020/erik_burger_genome_analysis/analyses/03_bwa_illumina_alignment_with_pacbio/bwa_alignment_illumina.sam \
 >  /home/erbu6020/erik_burger_genome_analysis/analyses/03_bwa_illumina_alignment_with_pacbio/bwa_alignment_illumina.bam

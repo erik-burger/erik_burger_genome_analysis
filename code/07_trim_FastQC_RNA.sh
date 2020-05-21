@@ -11,7 +11,9 @@
 module load bioinfo-tools
 module load FastQC/0.11.8
 
-# SRR6040095 (sequence that was trimmed by me)
+# QC on the given trimmed reads and the reads that i trimmed
+
+# SRR6040095 (reads that was trimmed by me)
 fastqc \
  /home/erbu6020/erik_burger_genome_analysis/analyses/06_trimmomatic_untrimmed_transcript/*.fq.gz \
  -o /home/erbu6020/erik_burger_genome_analysis/analyses/07_trim_FastQC_RNA/SRR6040095 \

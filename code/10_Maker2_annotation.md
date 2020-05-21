@@ -284,19 +284,7 @@ sbatch /home/erbu6020/erik_burger_genome_analysis/code/10_Maker2_step_7.sh
 Ran the fasta_merge script in maker to create a fasta so that the genes discovered can be identified later on.
 
 ```
-dc home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/
+cd /home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output
 
-gff3_merge -d pilon_assembly_master_datastore_index.log
+fasta_merge -d pilon_assembly_master_datastore_index.log
 ```
-
-
-
-junk:
-salloc -A g2020008 -p core -n 2 -t 00:30:00
-salloc -A g2020008 -p core -n 2 -t 02:00:00 --reservation=g2020008_05
-
-cp -r pilon_assembly.maker.output pilon_assembly.maker.output_ROUND4
-
-
-/home/erbu6020/erik_burger_genome_analysis/analyses/10_Maker2_annotation/pilon_assembly.maker.output/SNAP_round_1/my_genome.hmm
-
