@@ -8,3 +8,6 @@
 *.sam
 *.gz
 *.zip
+*.Rhistory
+*.RData
+*.idea
