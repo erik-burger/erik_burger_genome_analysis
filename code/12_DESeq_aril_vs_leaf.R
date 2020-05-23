@@ -3,11 +3,7 @@ library("DESeq2")
 SRR6040094 = read.table(file="../analyses/11_Htseq_expr_analysis/SRR6040094_count.txt")
 SRR6040095 = read.table(file="../analyses/11_Htseq_expr_analysis/SRR6040095_count.txt")
 SRR6040097 = read.table(file="../analyses/11_Htseq_expr_analysis/SRR6040097_count.txt")
-#stem
-#SRR6040096 = read.table(file="../analyses/11_Htseq_expr_analysis/SRR6040096_count.txt")
-# Root
-#SRR6040093 = read.table(file="../analyses/11_Htseq_expr_analysis/SRR6040093_count.txt")
-# Leaf
+# Musang King Leaf
 SRR6040092 = read.table(file="../analyses/11_Htseq_expr_analysis/SRR6040092_count.txt")
 
 full_table <- SRR6040094[2]
