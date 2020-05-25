@@ -10,8 +10,6 @@ full_table <- SRR6040094[2]
 names(full_table)[1] <- "SRR6040094"
 full_table$SRR6040095 <- SRR6040095[,2]
 full_table$SRR6040097 <- SRR6040097[,2]
-#full_table$SRR6040096 <- SRR6040096[,2]
-#full_table$SRR6040093 <- SRR6040093[,2]
 full_table$SRR6040092 <- SRR6040092[,2]
 rownames(full_table) <-SRR6040094[,1]
 
@@ -29,7 +27,6 @@ ddsFullCountTable <- DESeqDataSetFromMatrix(
   design = ~Sample_ID)
 ddsFullCountTable
 
-
 # Calcualte the change.
 ddsFullCountTable <- DESeq(ddsFullCountTable)
 
@@ -37,25 +34,11 @@ ddsFullCountTable <- DESeq(ddsFullCountTable)
 res <- results(ddsFullCountTable)
 mcols(res, use.names=TRUE)
 
-
 # Plot the MA plot 
-plotMA( res, ylim = c(-20, 20) )
-
-plotDispEsts( ddsFullCountTable, ylim = c(1e-6, 1e1) )
+plotMA( res, ylim = c(-10, 10) )
 
 #Plot a histogram of the obtained p-values
 hist( res$pvalue, breaks=20, col="grey" )
-
-#Rlog transforms the data
-rld <- rlog( ddsFullCountTable)
-head( assay(rld) )
-
-
-#scatterplot comparison between run SRR6040094 and SRR6040095
-par( mfrow = c( 1, 2) )
-plot( log2( 1+counts(ddsFullCountTable, normalized=TRUE)[, 1:2] ), col="#00000020", pch=20, cex=0.3 )
-plot( assay(rld)[, 1:2], col="#00000020", pch=20, cex=0.3 )
-
 
 #PCA comparing the two samples
 ramp <- 1:3/3
@@ -65,12 +48,11 @@ cols <- c(rgb(ramp, 0, 0),
           rgb(ramp, 0, ramp))
 print( plotPCA( rld, intgroup = c( "Sample_ID")) )
 
-# Only results with a pvalue under 0.5
-dems <- res[complete.cases(res$baseMean), ]
-dems <- dems[complete.cases(dems$pvalue), ]
-dems <- dems[dems$pvalue < 0.05,]
+# Remove results wit p-value over 0.05
+reduced_res <- res[complete.cases(res$baseMean), ]
+reduced_res <- reduced_res[complete.cases(reduced_res$pvalue), ]
+reduced_res <- reduced_res[reduced_res$pvalue < 0.05,]
 
 setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/analyses/12_DESeq')
-write.table(dems, file='aril_vs_leaf.tsv',sep='\t',quote=FALSE)
+write.table(reduced_res, file='aril_vs_leaf.tsv',sep='\t',quote=FALSE)
 setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/code')
-

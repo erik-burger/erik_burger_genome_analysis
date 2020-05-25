@@ -39,7 +39,7 @@ ddsFullCountTable <- DESeqDataSetFromMatrix(
   design = ~Sample_ID)
 ddsFullCountTable
 
-# Collapse the replicates (this was not used since Deseq2 can not unse 1 to 1 inputs)
+# Collapse the replicates (this was not used since Deseq2 can not use 1 to 1 inputs)
 ddsCollapsed <- collapseReplicates( ddsFullCountTable,
                                     groupby = ddsFullCountTable$Sample_ID,
                                     )
@@ -57,17 +57,6 @@ plotMA( res, ylim = c(-10, 10) )
 #Plot a histogram of the obtained p-values
 hist( res$pvalue, breaks=20, col="grey" )
 
-#Rlog transforms the data
-rld <- rlog( ddsFullCountTable)
-head( assay(rld) )
-
-
-#scatterplot comparison between run SRR6040094 and SRR6040095
-par( mfrow = c( 1, 2) )
-plot( log2( 1+counts(ddsFullCountTable, normalized=TRUE)[, 1:2] ), col="#00000020", pch=20, cex=0.3 )
-plot( assay(rld)[, 1:2], col="#00000020", pch=20, cex=0.3 )
-
-
 #PCA comparing the two samples
 ramp <- 1:3/3
 cols <- c(rgb(ramp, 0, 0),
@@ -76,12 +65,11 @@ cols <- c(rgb(ramp, 0, 0),
           rgb(ramp, 0, ramp))
 print( plotPCA( rld, intgroup = c( "Sample_ID")) )
 
-
-dems <- res[complete.cases(res$baseMean), ]
-dems <- dems[complete.cases(dems$pvalue), ]
-dems <- dems[dems$pvalue < 0.05,]
+# Remove results wit p-value over 0.05
+reduced_res <- res[complete.cases(res$baseMean), ]
+reduced_res <- reduced_res[complete.cases(reduced_res$pvalue), ]
+reduced_res <- reduced_res[reduced_res$pvalue < 0.05,]
 
 setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/analyses/12_DESeq')
-write.table(dems, file='aril_vs_aril.tsv',sep='\t',quote=FALSE)
+write.table(reduced_res, file='aril_vs_aril.tsv',sep='\t',quote=FALSE)
 setwd('/Users/ErikBurger/Desktop/Genomanalys/erik_burger_genome_analysis/code')
-
